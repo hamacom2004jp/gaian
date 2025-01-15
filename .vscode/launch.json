@@ -1,0 +1,38 @@
+{
+    // IntelliSense を使用して利用可能な属性を学べます。
+    // 既存の属性の説明をホバーして表示します。
+    // 詳細情報は次を確認してください: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.0.1",
+    "configurations": [
+        {
+            "name": "Python: gaian version",
+            "type": "python",
+            "request": "launch",
+            "args": ["-v"],
+            "module": "gaian",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
+            "justMyCode": false
+        },
+        {
+            "name": "Python: gaian server",
+            "type": "python",
+            "request": "launch",
+            "args": ["-m","server","-c","start","--debug"],
+            "module": "gaian",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
+            "justMyCode": false
+        },
+        {
+            "name": "Python: gaian web",
+            "type": "python",
+            "request": "launch",
+            "args": ["-m","web","-c","start","--signin_file",".samples/user_list.yml","--debug"],
+            "module": "gaian",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
+            "justMyCode": false
+        }
+    ]
+}

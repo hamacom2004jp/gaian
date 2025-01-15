@@ -1,0 +1,32 @@
+features:
+  cli:
+    - package: iinfer.app.features.cli
+      prefix: iinfer_client_deploy_list
+    - package: gaian.app.features.cli
+      prefix: gaian_
+  web:
+    - package: iinfer.app.features.web
+      prefix: iinfer_web_
+      exclude_modules:
+        - iinfer_web_gui
+    - package: gaian.app.features.web
+      prefix: gaian_web_
+args:
+  cli:
+    - rule:
+        mode: web
+      default:
+        data: f"{Path(self.ver.__file__).parent / 'data'}"
+      coercion:
+        assets:
+          - f"{Path(self.ver.__file__).parent / 'web' / 'assets'}"
+          - f"{Path(__import__('iinfer.version', fromlist=['']).__file__).parent / 'web' / 'assets'}"
+        doc_root: f"{Path(self.ver.__file__).parent / 'web'}"
+    - rule:
+        mode: gui
+      default:
+      coercion:
+        assets:
+          - f"{Path(self.ver.__file__).parent / 'web' / 'assets'}"
+          - f"{Path(__import__('iinfer.version', fromlist=['']).__file__).parent / 'web' / 'assets'}"
+        doc_root: f"{Path(self.ver.__file__).parent / 'web'}"

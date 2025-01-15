@@ -1,4 +1,8 @@
+.. -*- coding: utf-8 -*-
+
+**************
 MIT License
+**************
 
 Copyright (c) 2023-2025 hamacom2004jp All Rights Reserved.
 
